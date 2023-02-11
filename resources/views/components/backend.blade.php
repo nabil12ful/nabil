@@ -8,17 +8,28 @@
         <meta content="" name="description" />
         <meta content="Nabil Hamada" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="image/fav.png">
+        <link rel="shortcut icon" href="{{ asset('image/fav.png') }}">
+
+        <!-- DataTables -->
+        <link href="{{ asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="{{ asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" /> 
+
+        <!-- choices css -->
+        <link href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- preloader css -->
-        <link rel="stylesheet" href="assets/css/preloader.min.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('assets/css/preloader.min.css') }}" type="text/css" />
 
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+
 
     </head>
 
@@ -37,19 +48,19 @@
                         <div class="navbar-brand-box">
                             <a href="{{ route('admin_home') }}" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="image/fav.png" alt="" height="24">
+                                    <img src="{{ asset('image/fav.png') }}" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="image/fav.png" alt="" height="24"> <span class="logo-txt">Nabil Hamada</span>
+                                    <img src="{{ asset('image/fav.png') }}" alt="" height="24"> <span class="logo-txt">Nabil Hamada</span>
                                 </span>
                             </a>
 
                             <a href="{{ route('admin_home') }}" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="image/fav.png" alt="" height="24">
+                                    <img src="{{ asset('image/fav.png') }}" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="image/logo7.png" alt="" height="35"> <span class="logo-txt"></span>
+                                    <img src="{{ asset('image/logo7.png') }}" alt="" height="35"> <span class="logo-txt"></span>
                                 </span>
                             </a>
                         </div>
@@ -91,15 +102,15 @@
 
                         <div class="dropdown d-none d-sm-inline-block">
                             <button type="button" class="btn header-item" id="mode-setting-btn">
-                                <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
-                                <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                                <i data-feather="moon"style="font-size:25px"  class="icon-lg layout-mode-dark mdi mdi-weather-night"></i>
+                                <i data-feather="sun" style="font-size:25px" class="icon-lg layout-mode-light mdi mdi-white-balance-sunny"></i>
                             </button>
                         </div>
 
                         <div class="dropdown d-none d-lg-inline-block ms-1">
                             <button type="button" class="btn header-item"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="grid" class="icon-lg"></i>
+                                <i style="font-size:25px" class="icon-lg mdi mdi-view-dashboard"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                                 <div class="p-2">
@@ -151,7 +162,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon position-relative" id="page-header-notifications-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="bell" class="icon-lg"></i>
+                                <i data-feather="bell" class="icon-lg mdi mdi-bell-outline"></i>
                                 <span class="badge bg-danger rounded-pill">5</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
@@ -246,7 +257,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="{{ asset('assets/images/users/avatar-1.jpg') }}"
                                     alt="Header Avatar">
                                 <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ auth()->user()->name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -337,7 +348,7 @@
 
 
         <!-- Right Sidebar -->
-        <div class="right-bar">
+        {{-- <div class="right-bar">
             <div data-simplebar class="h-100">
                 <div class="rightbar-title d-flex align-items-center p-3">
 
@@ -468,25 +479,49 @@
                 </div>
 
             </div> <!-- end slimscroll-menu-->
-        </div>
+        </div> --}}
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
         <!-- pace js -->
-        <script src="assets/libs/pace-js/pace.min.js"></script>
+        <script src="{{ asset('assets/libs/pace-js/pace.min.js') }}"></script>
 
-        <script src="assets/js/app.js"></script>
+        <!-- Required datatable js -->
+        <script src="{{ asset('assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+        <!-- Buttons examples -->
+        <script src="{{ asset('assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/jszip/jszip.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/pdfmake/build/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/pdfmake/build/vfs_fonts.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
 
+        <!-- Responsive examples -->
+        <script src="{{ asset('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') }}"></script>
+
+        <!-- Datatable init js -->
+        <script src="{{ asset('assets/js/pages/datatables.init.js') }}"></script>    
+
+        <!-- choices js -->
+        <script src="{{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
+
+        <!-- init js -->
+        <script src="{{ asset('assets/js/pages/form-advanced.init.js') }}"></script>
+
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        @yield('js')
     </body>
-
-<!-- Mirrored from themesbrand.com/minia/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Dec 2022 12:43:34 GMT -->
 </html>

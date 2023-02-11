@@ -22,6 +22,15 @@ Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('ad
         Route::get('/', 'index')->name('home');
     });
 
+    Route::controller(ServiceController::class)->prefix('services')->name('service_')->group(function(){
+        Route::get('/', 'index')->name('all');
+        Route::get('add-new', 'create')->name('create');
+        Route::post('store-new', 'store')->name('store');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::post('update/{id}', 'update')->name('update');
+        Route::get('delete/{id}', 'destroy')->name('delete');
+    });
+
 });
 
 
