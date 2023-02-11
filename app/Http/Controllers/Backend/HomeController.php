@@ -1,12 +1,12 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Http\Controllers\Backend;
 
-use {{ rootNamespace }}Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Nabil\StoreDataRequests;
 
-class {{ class }} extends Controller
+class HomeController extends Controller
 {
 
     protected $folderBlade = 'frontend.';
