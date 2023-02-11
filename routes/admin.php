@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 
-Route::namespace('App\Http\Controllers\Frontend')->group(function(){
+Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('admin')->name('admin_')->group(function(){
 
     Route::controller(HomeController::class)->group(function(){
         Route::get('/', 'index')->name('home');

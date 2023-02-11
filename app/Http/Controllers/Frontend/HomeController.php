@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ use Nabil\StoreDataRequests;
 class HomeController extends Controller
 {
 
-    protected $folderBlade = 'backend.';
+    protected $folderBlade = 'frontend.';
 
     protected $model = \App\Models\User::class;
 
@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            // 
+            'data' => $this->model::all(),
         ];
         return view($this->folderBlade . '.index', $data);
     }
