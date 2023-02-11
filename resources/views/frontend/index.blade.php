@@ -1,6 +1,4 @@
-@extends('layout.master')
-
-@section('content')
+<x-frontend>
     <!-- HERO AREA -->
     <section class="hero-area" id="hero-area">
         <div class="container">
@@ -886,7 +884,7 @@
     </section> <!-- .testimonial-section -->
 
     <!-- BLOG SECTION -->
-    <section class="blog-section section-block" id="blog-section">  
+    <section class="blog-section section-block" id="blog-section">
         <div class="container">
             <div class="section-title">
                 <h2>From My Blog</h2>
@@ -1660,4 +1658,4 @@
                 alt="contact element 2">
         </div> <!-- .design-elements -->
     </section> <!-- .contact-section -->
-@endsection
+</x-frontend>

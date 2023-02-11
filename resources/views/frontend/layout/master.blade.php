@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="image/fav.png" type="image/x-icon">
 	<link rel="icon" href="image/fav.png" type="image/x-icon">
 
-    @include('layout.style')
+    @include('frontend.layout.style')
 
     <title>Nabil Hamada | Backend Web Developer</title>
 </head>
@@ -27,15 +27,15 @@
 	</div>
 
 	<!-- SITE HEADER -->
-	@include('layout.header')
+	@include('frontend.layout.header')
     <!-- .site-header -->
 
     @yield('content')
 	<!-- SITE FOOTER -->
-	@include('layout.footer')
+	@include('frontend.layout.footer')
     <!-- .site-footer -->
 
-    @include('layout.script')
+    @include('frontend.layout.script')
 </body>
 
 <!-- Mirrored from ethemestudio.com/demo/fungi/4_developer/index_dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 14:34:00 GMT -->
