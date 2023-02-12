@@ -79,13 +79,13 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li>
-                    <a href="{{ route('admin_service_create') }}">
+                    <a href="{{ route('admin_project_create') }}">
                         <span data-key="t-project">Add Project</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('admin_service_all') }}">
+                    <a href="{{ route('admin_project_all') }}">
                         <span data-key="t-projects">All Projects</span>
                     </a>
                 </li>

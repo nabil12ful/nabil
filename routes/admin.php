@@ -40,6 +40,15 @@ Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('ad
         Route::get('delete/{id}', 'destroy')->name('delete');
     });
 
+    Route::controller(ProjectController::class)->prefix('projects')->name('project_')->group(function(){
+        Route::get('/', 'index')->name('all');
+        Route::get('add-new', 'create')->name('create');
+        Route::post('store-new', 'store')->name('store');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::post('update/{id}', 'update')->name('update');
+        Route::get('delete/{id}', 'destroy')->name('delete');
+    });
+
 });
 
 
