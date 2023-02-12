@@ -103,7 +103,22 @@
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="{{ route('admin_basic_edit') }}" data-key="t-profile">Basics</a></li>
                 <li><a href="{{ route('admin_contact_edit') }}" data-key="t-profile">Contact</a></li>
-                <li><a href="apps-contacts-list.html" data-key="t-user-list">Programming Langs</a></li>
+                <li>
+                    <a href="javascript: void(0);" data-key="t-user-list">Programming Langs</a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{ route('admin_programming_create') }}">
+                                <span data-key="t-project">Add Language</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('admin_programming_all') }}">
+                                <span data-key="t-projects">All Languages</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">My World</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">About Me</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">Why Work</a></li>

@@ -49,6 +49,15 @@ Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('ad
         Route::get('delete/{id}', 'destroy')->name('delete');
     });
 
+    Route::controller(ProgrammingController::class)->prefix('programming')->name('programming_')->group(function(){
+        Route::get('/', 'index')->name('all');
+        Route::get('add-new', 'create')->name('create');
+        Route::post('store-new', 'store')->name('store');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::post('update/{id}', 'update')->name('update');
+        Route::get('delete/{id}', 'destroy')->name('delete');
+    });
+
     Route::controller(BasicController::class)->prefix('basic')->name('basic_')->group(function(){
         Route::get('edit', 'edit')->name('edit');
         Route::post('update', 'update')->name('update');
