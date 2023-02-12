@@ -58,9 +58,14 @@ Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('ad
         Route::get('delete/{id}', 'destroy')->name('delete');
     });
 
-    Route::controller(BasicController::class)->prefix('basic')->name('basic_')->group(function(){
+    Route::controller(MyWorldController::class)->prefix('MyWorld')->name('MyWorld_')->group(function(){
         Route::get('edit', 'edit')->name('edit');
         Route::post('update', 'update')->name('update');
+    });
+
+    Route::controller(BasicController::class)->prefix('basic')->name('basic_')->group(function(){
+        Route::get('edit', 'edit')->name('edit');
+        Route::post('update', 'update')->name('update');        
     });
 
     Route::controller(ContactController::class)->prefix('contact')->name('contact_')->group(function(){
