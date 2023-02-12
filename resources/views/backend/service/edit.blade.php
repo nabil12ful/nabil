@@ -13,10 +13,10 @@
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <x-input name="name" type="text" label="Service Name" :value="$data->name"></x-input>
+                                <x-input name="name" type="text" label="Service Name" :value="$data->name" />
                             </div>
                             <div class="col-md-6">
-                                <x-input name="icon" type="text" label="Service Icon" :value="$data->icon"></x-input>
+                                <x-input name="icon" type="text" label="Service Icon" :value="$data->icon" />
                             </div>
                             <div class="col-md-8">
                                 <x-textarea name="description" label="Description" cols="10" rows="5" >{{ $data->description }}</x-textarea>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                 </div>
             </div>
         </div> <!-- end col -->

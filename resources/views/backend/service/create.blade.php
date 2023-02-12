@@ -13,13 +13,13 @@
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <x-input name="name" type="text" label="Service Name" value=""></x-input>
+                                <x-input name="name" type="text" label="Service Name" value="" />
                             </div>
                             <div class="col-md-6">
-                                <x-input name="icon" type="text" label="Service Icon" value=""></x-input>
+                                <x-input name="icon" type="text" label="Service Icon" value="" />
                             </div>
                             <div class="col-md-8">
-                                <x-textarea name="description" label="Description" cols="10" rows="5" ></x-textarea>
+                                <x-textarea name="description" label="Description" cols="10" rows="5"></x-textarea>
                             </div>
                             <div class="col-md-2">
                                 <label for="">Visible?</label>
