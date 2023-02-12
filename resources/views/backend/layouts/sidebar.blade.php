@@ -102,12 +102,11 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="{{ route('admin_basic_edit') }}" data-key="t-profile">Basics</a></li>
-                <li><a href="apps-contacts-grid.html" data-key="t-user-grid">Social Media</a></li>
+                <li><a href="{{ route('admin_contact_edit') }}" data-key="t-profile">Contact</a></li>
                 <li><a href="apps-contacts-list.html" data-key="t-user-list">Programming Langs</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">My World</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">About Me</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">Why Work</a></li>
-                <li><a href="apps-contacts-profile.html" data-key="t-profile">Contact</a></li>
             </ul>
         </li>
     </ul>

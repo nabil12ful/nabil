@@ -54,6 +54,11 @@ Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('ad
         Route::post('update', 'update')->name('update');
     });
 
+    Route::controller(ContactController::class)->prefix('contact')->name('contact_')->group(function(){
+        Route::get('edit', 'edit')->name('edit');
+        Route::post('update', 'update')->name('update');
+    });
+
 });
 
 
