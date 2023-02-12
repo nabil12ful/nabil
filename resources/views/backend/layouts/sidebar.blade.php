@@ -120,7 +120,7 @@
                     </ul>
                 </li>
                 <li><a href="{{ route('admin_MyWorld_edit') }}" data-key="t-profile">My World</a></li>
-                <li><a href="apps-contacts-profile.html" data-key="t-profile">About Me</a></li>
+                <li><a href="{{ route('admin_about_edit') }}" data-key="t-profile">About Me</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">Why Work</a></li>
             </ul>
         </li>
