@@ -59,14 +59,14 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li>
-                    <a href="{{ route('admin_service_create') }}">
-                        <span data-key="t-service">Add Service</span>
+                    <a href="{{ route('admin_skill_create') }}">
+                        <span data-key="t-skill">Add Skill</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('admin_service_all') }}">
-                        <span data-key="t-service">All Services</span>
+                    <a href="{{ route('admin_skill_all') }}">
+                        <span data-key="t-skills">All Skills</span>
                     </a>
                 </li>
             </ul>
