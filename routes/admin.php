@@ -78,6 +78,11 @@ Route::namespace('App\Http\Controllers\Backend')->middleware('auth')->prefix('ad
         Route::post('update', 'update')->name('update');
     });
 
+    Route::controller(WhoWorkController::class)->prefix('who-work-with-me')->name('WhoWork_')->group(function(){
+        Route::get('edit', 'edit')->name('edit');
+        Route::post('update', 'update')->name('update');
+    });
+
 });
 
 
