@@ -101,7 +101,7 @@
                 <span data-key="t-horizontal">Layouts</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="apps-contacts-profile.html" data-key="t-profile">Basics</a></li>
+                <li><a href="{{ route('admin_basic_edit') }}" data-key="t-profile">Basics</a></li>
                 <li><a href="apps-contacts-grid.html" data-key="t-user-grid">Social Media</a></li>
                 <li><a href="apps-contacts-list.html" data-key="t-user-list">Programming Langs</a></li>
                 <li><a href="apps-contacts-profile.html" data-key="t-profile">My World</a></li>
