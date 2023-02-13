@@ -39,16 +39,16 @@
                             <a class="btn-main" href="tel:{{ getContact()->phone }}">Contact Me</a>
                             <ul class="hero-social list-inline">
                                 @if (!is_null(getContact()->facebook))
-                                <li class="list-inline-item"><a href="{{ getContact()->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a target="_blank" href="{{ getContact()->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
                                 @endif
                                 @if (!is_null(getContact()->twitter))
-                                <li class="list-inline-item"><a href="{{ getContact()->twitter }}"><i class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a target="_blank" href="{{ getContact()->twitter }}"><i class="fab fa-twitter"></i></a></li>
                                 @endif
                                 @if (!is_null(getContact()->linkedin))
-                                <li class="list-inline-item"><a href="{{ getContact()->linkedin }}"><i class="fab fa-linkedin"></i></a></li>
+                                <li class="list-inline-item"><a target="_blank" href="{{ getContact()->linkedin }}"><i class="fab fa-linkedin"></i></a></li>
                                 @endif
                                 @if (!is_null(getContact()->instagram))
-                                <li class="list-inline-item"><a href="{{getContact()->instagram}}"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a target="_blank" href="{{getContact()->instagram}}"><i class="fab fa-instagram"></i></a></li>
                                 @endif
                             </ul> <!-- .hero-social -->
                         </div> <!-- .link-group -->
@@ -319,7 +319,7 @@
                             </div>
                         </div>
                         @endforeach
-                        
+
                     </div>
                 @endforeach
             </div> <!-- .row -->
