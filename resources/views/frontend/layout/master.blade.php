@@ -6,14 +6,17 @@
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="{{ getAppData()->keywords }}">
+    <meta name="author" content="{{ getAppData()->name }}">
+    <meta name="description" content="{{ getAppData()->desc }}">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="image/fav.png" type="image/x-icon">
-	<link rel="icon" href="image/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ asset('upload/basic/'.getAppData()->fav) }}" type="image/x-icon">
+	<link rel="icon" href="{{ asset('upload/basic/'.getAppData()->fav) }}" type="image/x-icon">
 
     @include('frontend.layout.style')
 
-    <title>Nabil Hamada | Backend Web Developer</title>
+    <title>{{ getAppData()->name }} | Backend Web Developer</title>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#site-navbar" class="home-developer dark-mode">
 

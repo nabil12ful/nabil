@@ -2,16 +2,26 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 text-center branding-block">
-                <a class="footer-brand" href="#"><img src="image/logo7.png" alt="Nabil Hamada"></a>
+                <a class="footer-brand" href="{{ route('home') }}"><img src="{{ asset('upload/basic/'.getAppData()->logo) }}" alt="{{ getAppData()->name }}"></a>
                 <p>
-                    Kilaboris nisi ut aliquip ex ea commodo consequat uis aute cupidatat non proident sunt in culd est laborum.
+                    {{ getAppData()->desc }}
                 </p>
                 <ul class="list-inline footer-social">
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    @if (!is_null(getContact()->facebook))
+                        <li class="list-inline-item"><a href="{{ getContact()->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                    @endif
+                    @if (!is_null(getContact()->twiiter))
+                        <li class="list-inline-item"><a href="{{ getContact()->twitter }}"><i class="fab fa-twitter"></i></a></li>
+                    @endif
+                    @if (!is_null(getContact()->linkedin))
+                        <li class="list-inline-item"><a href="{{ getContact()->linkedin }}"><i class="fab fa-linkedin"></i></a></li>
+                    @endif
+                    @if (!is_null(getContact()->youtube))
+                        <li class="list-inline-item"><a href="{{ getContact()->youtube }}"><i class="fab fa-youtube"></i></a></li>
+                    @endif
+                    @if (!is_null(getContact()->instagram))
+                        <li class="list-inline-item"><a href="{{ getContact()->instagram }}"><i class="fab fa-instagram"></i></a></li>
+                    @endif
                 </ul>
             </div>
 
@@ -19,7 +29,7 @@
         <div class="back-to-top"><a href="#site-header"><i class="bi bi-box-arrow-up"></i></a></div>
         <div class="row footer-bottom">
             <div class="col-md-6">
-                <p>All rights reserved &copy; 2023 <strong>Nabil Hamada</strong></p>
+                <p>All rights reserved &copy; 2023 <strong>{{ getAppData()->name }}</strong></p>
             </div>
             <div class="col-md-6">
                 <ul class="list-inline text-md-end">

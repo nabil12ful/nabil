@@ -1,7 +1,7 @@
 <header class="site-header" id="site-header">
     <nav class="navbar navbar-expand-xl" id="site-navbar">
         <div class="container">
-            <a class="navbar-brand" href="/"><img class="" src="image/logo7.png" alt="fungi logo"
+            <a class="navbar-brand" href="{{ route('home') }}"><img class="" src="{{ asset('upload/basic/'.getAppData()->logo) }}" alt="{{ getAppData()->name }}"
                     style="
             height: 60px;
             width: 270px;
@@ -25,12 +25,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#service-section">Service</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#testimonial-section">Testimonials</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#blog-section">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="#contact-section">Contact</a>
                     </li>
